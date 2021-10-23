@@ -1,0 +1,16 @@
+.card-css {
+  display: flex !important;
+  justify-content: center !important;
+}
+.ant-card-cover {
+  display: flex !important;
+  justify-content: center !important;
+}
+.image-css {
+  height: 170px !important;
+  width: 170px !important;
+  margin-top: 6% !important;
+}
+.add-space-from-bottom {
+  margin-bottom: 2% !important;
+}
