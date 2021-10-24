@@ -9,6 +9,7 @@ import _ from "lodash";
 import { useHistory } from "react-router-dom";
 import credentials from "./credentials.json";
 import { loginPrtocess,isAdmin } from "../../store/actions";
+import { toast } from "react-toastify";
 
 const mapStateToProps = ({ navData }: StoreState) => ({
   navData,
@@ -31,6 +32,13 @@ const Login: React.FC<Props> = function ({dispatch}) {
     const loginCredentials: any = _.find(credentials, function (o) {
       return o.email === values.email && o.password === values.password;
     });
+    console.log("🚀 ~ file: index.tsx ~ line 34 ~ loginCredentials", loginCredentials)
+    if (_.isUndefined(loginCredentials)) {
+      toast.error(<div>Please check email and password</div>, {
+        position: "bottom-right",
+      });
+      return;
+    }
     window.localStorage.setItem("loginUser", JSON.stringify(loginCredentials));
     dispatch(isAdmin(loginCredentials&&loginCredentials.isAdmin?loginCredentials.isAdmin:'false'))
     if (window.localStorage.getItem("loginUser")) {
