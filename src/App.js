@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/index";
 import Home from "./components/home";
-import Cart from "./components/Cart";
+import DashBoard from "./components/dashboard";
+import Login from "./components/login";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify";
 import "antd/dist/antd.css";
@@ -15,7 +16,8 @@ class App extends Component {
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/cart" component={Cart} />
+            <Route exact path="/dashboard" component={DashBoard} />
+            <Route exact path="/login" component={Login} />
           </Switch>
           <ToastContainer
             position="top-right"

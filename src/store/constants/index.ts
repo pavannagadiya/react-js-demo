@@ -2,3 +2,8 @@ export const PRODUCTS = {
     FETCHPRODUCTS: "FETCHPRODUCTS",
     FETCHPRODUCTLOADER: "FETCHPRODUCTLOADER", 
   };
+
+  export const NAV = {
+    ISLOGIN: "ISLOGIN",
+    ISADMIN: "ISADMIN",
+  };

@@ -1,0 +1,7 @@
+.add-margin {
+  margin: 2% !important;
+}
+.add-margin-top-only {
+  margin-top: 2% !important;
+  font-size: 40px;
+}

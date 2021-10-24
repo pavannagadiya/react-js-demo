@@ -19,7 +19,6 @@ export function productList() {
       .then((res: any) => {
         if (res.status === 200) {
           const data = res.data;
-          console.log("🚀 ~ file: products.ts ~ line 22 ~ .then ~ data", data)
           dispatch(setFetchProduct(data));
           return dispatch(setFetchProductLoader(false));
         }
@@ -41,7 +40,6 @@ export function addToCart() {
       .then((res: any) => {
         if (res.status === 200) {
           const data = res.data;
-          console.log("🚀 ~ file: products.ts ~ line 22 ~ .then ~ data", data)
           dispatch(setFetchProduct(data));
           return dispatch(setFetchProductLoader(false));
         }
