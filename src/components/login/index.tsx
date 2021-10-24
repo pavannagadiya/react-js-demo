@@ -32,7 +32,6 @@ const Login: React.FC<Props> = function ({dispatch}) {
     const loginCredentials: any = _.find(credentials, function (o) {
       return o.email === values.email && o.password === values.password;
     });
-    console.log("🚀 ~ file: index.tsx ~ line 34 ~ loginCredentials", loginCredentials)
     if (_.isUndefined(loginCredentials)) {
       toast.error(<div>Please check email and password</div>, {
         position: "bottom-right",
